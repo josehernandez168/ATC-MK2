@@ -1,0 +1,33 @@
+2022-07-20T20:52:12.847852600255-20:52:12 **** Incremental Build of configuration Debug for project Obstacle_Avoidance_Algorithm ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/main.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/jalbe/OneDrive/Desktop/FIU/Summer_2022/EEL_4740/Final_Project/Car-Zybo/Block_design_1_wrapper_1/export/Block_design_1_wrapper_1/sw/Block_design_1_wrapper_1/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+000-../src/main.c: In function 'tmr_init':
+000/Obstacle_Avoidance_Algorithm/src/main.c22-1-1variable 'status' set but not used [-Wunused-but-set-variable]1-../src/main.c:22:7: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+000-   22 |   int status =  XTmrCtr_Initialize(&tmr,XPAR_AXI_TIMER_0_DEVICE_ID );
+000-      |       ^~~~~~
+000-../src/main.c: In function 'get_distance':
+000/Obstacle_Avoidance_Algorithm/src/main.c122-1-1unused variable 'two' [-Wunused-variable]1-../src/main.c:122:10: warning: unused variable 'two' [-Wunused-variable]
+000-  122 |      int two=one*343/2;
+000-      |          ^~~
+000-'Finished building: ../src/main.c'
+000-' '
+000-'Building target: Obstacle_Avoidance_Algorithm.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/jalbe/OneDrive/Desktop/FIU/Summer_2022/EEL_4740/Final_Project/Car-Zybo/Block_design_1_wrapper_1/export/Block_design_1_wrapper_1/sw/Block_design_1_wrapper_1/standalone_ps7_cortexa9_0/bsplib/lib -o "Obstacle_Avoidance_Algorithm.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: Obstacle_Avoidance_Algorithm.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size Obstacle_Avoidance_Algorithm.elf  |tee "Obstacle_Avoidance_Algorithm.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  25660	   1208	  22632	  49500	   c15c	Obstacle_Avoidance_Algorithm.elf
+000-'Finished building: Obstacle_Avoidance_Algorithm.elf.size'
+000-' '
+00255-
+20:52:15 Build Finished (took 2s.700ms)
+
